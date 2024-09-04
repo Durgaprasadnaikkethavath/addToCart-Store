@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your cart</title>
+  </head>
+  <body>
+    <h1>Your added Cart</h1>
+    <div id="cart_items"></div>
+    <button id="clear-items">clear all items</button>
+    <a href="/index.html">BackToHome</a>
+    <script src="/cart.js"></script>
+
+    <script>
+      const cartItemsContainer = document.getElementById("cart_items");
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      if (cart.length > 0) {
+        cart.forEach((item) => {
+          const itemElement = document.createElement("div");
+          itemElement.innerHTML = `<h3>${item.name}</h3><p>${item.price}</p>`;
+          cartItemsContainer.appendChild(itemElement);
+        });
+      } else {
+        cartItemsContainer.innerHTML = "<p>Your cart is Empty.</p>";
+      }
+    </script>
+  </body>
+</html>

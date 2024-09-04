@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddToCart</title>
+  </head>
+  <body>
+    <h1>AddToCart</h1>
+    <a href="/cart.html">Your Cart</a>
+    <div id="products">
+      <div class="product" data-id="1" data-name="Product 1" data-price="10">
+        <h2>Product 1</h2>
+        <p>Price: $10</p>
+        <button onclick="addToCart(1, 'Product 1', 10)">Add to Cart</button>
+      </div>
+      <div class="product" data-id="2" data-name="Product 2" data-price="20">
+        <h2>Product 2</h2>
+        <p>Price: $20</p>
+        <button onclick="addToCart(2, 'Product 2', 20)">Add to Cart</button>
+      </div>
+    </div>
+
+    <script src="/cart.js"></script>
+  </body>
+</html>
